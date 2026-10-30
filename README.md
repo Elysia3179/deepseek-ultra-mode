@@ -59,7 +59,8 @@
 ├── .gitignore
 ├── ultra-mode/                            ← 技能本体（可整目录复制安装）
 │   ├── SKILL.md                           ← 核心：frontmatter + 行为契约 + 调用方式
-│   ├── README.md                          ← 技能包内说明
+│   ├── README.md                          ← 技能包内说明（含多账号安装实测）
+│   ├── _skillhub_meta.json                ← WorkBuddy 专用展示元数据（其他运行时忽略）
 │   └── references/
 │       ├── attribution.md                 ← 标语出处考证
 │       ├── operating-rules.md             ← 九条规则的正反例细则

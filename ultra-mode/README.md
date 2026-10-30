@@ -52,6 +52,39 @@ Copy-Item -Recurse -Force . "$env:USERPROFILE\.workbuddy\skills\ultra-mode"
 
 ---
 
+## 本地安装位置与多账号行为（WorkBuddy 专用）
+
+WorkBuddy 的用户级技能只有**一处**根目录：
+
+```text
+%USERPROFILE%\.workbuddy\skills\<技能名>\
+```
+
+实测结论（2026-10-30，Windows + WorkBuddy）：
+
+| 观察项 | 实测结果 |
+|---|---|
+| 技能根目录 | 只有 `~/.workbuddy/skills/` 一处，路径中不含任何账号 UUID |
+| 账号目录 | `~/.workbuddy/user-<uuid>-personal/` 里只有 `SOUL.md` / `IDENTITY.md` / `USER.md` / `workspace-state.json`，**没有** `skills/` 子目录 |
+| 账号状态目录 | `~/.workbuddy/<uuid>/` 里只有 `sidebar-list-snapshot.json` 与 `startup-route.json`，无技能开关 |
+| 技能清单缓存 | `~/.workbuddy/.skill-list-cache.json` 的 `scopeKey` 只列根路径，**不含账号标识** |
+| 启用状态字段 | `disable` / `disableModelInvocation` 是**全局**的，不分账号 |
+
+**结论：装一份 = 同一 Windows 用户下的所有 WorkBuddy 账号可用，无需按账号复制。**
+
+### 两种元数据文件，只有一个有效
+
+| 文件 | 是否被扫描器读取 | 作用 |
+|---|---|---|
+| `_skillhub_meta.json` | ✅ 会 | 提供 `description_zh` / `description_en` / `examples_zh` / `examples_en` 等展示字段 |
+| `workbuddy.json` | ❌ 不会（实测） | 放在技能根目录写了也不生效，别浪费这个文件 |
+
+### 装完不用重启
+
+文件监听器会在数秒内重建缓存（实测 5 秒内 `ultra-mode` 出现在 `.skill-list-cache.json`，条目数 60 → 61）。若改的是元数据而界面没变，`touch SKILL.md` 触发一次重扫即可。
+
+---
+
 ## 安装后验证（三步，都能外部核验）
 
 ```bash

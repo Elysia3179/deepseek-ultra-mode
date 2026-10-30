@@ -1,0 +1,18 @@
+{
+  "name": "ultra-mode",
+  "installedAt": 1793327000000,
+  "source": "userSettings",
+  "version": "1.0.0",
+  "description_zh": "极限测试模式：把「省成本」从决策函数里删掉，换成更多被验证的证据",
+  "description_en": "Spend tokens on evidence, not words: a verification-first execution mode",
+  "examples_zh": [
+    "ultra mode：帮我把这个模块重构了",
+    "这个方案要拿去汇报，帮我压一遍",
+    "线上回调偶发重复扣款，穷尽排查一下"
+  ],
+  "examples_en": [
+    "ultra mode: refactor this module",
+    "stress-test this plan before I present it",
+    "exhaustively debug this intermittent duplicate charge"
+  ]
+}
