@@ -1,0 +1,31 @@
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*~
+
+# 依赖与构建产物（本技能包无依赖，预留给二次开发）
+node_modules/
+dist/
+build/
+__pycache__/
+*.pyc
+
+# 本地环境与密钥：绝不上传
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+
+# 日志与临时文件
+*.log
+*.tmp
+
+# 本地 Agent 运行时状态与本地安装的技能副本
+.workbuddy/
