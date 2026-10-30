@@ -53,7 +53,8 @@
 .
 ├── README.md                              ← 本文件
 ├── README.en.md                           ← English README
-├── LICENSE                                ← MIT
+├── LICENSE                                ← MIT（仅纯 MIT 正文，便于 GitHub 自动识别）
+├── THIRD-PARTY-NOTICES.md                 ← 第三方归属声明（标语出处与免责）
 ├── CONTRIBUTING.md
 ├── .gitignore
 ├── ultra-mode/                            ← 技能本体（可整目录复制安装）
@@ -167,4 +168,4 @@ Copy-Item -Recurse -Force .\ultra-mode "$env:USERPROFILE\.workbuddy\skills\ultra
 
 ## 许可证
 
-[MIT](LICENSE)。标语引用遵循上游 MIT 许可，出处见上。本仓库为第三方技能包，与 DeepSeek 公司**无隶属、无背书关系**。
+[MIT](LICENSE)。标语引用遵循上游 MIT 许可，出处见上；完整归属与免责声明见 [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md)。本仓库为第三方技能包，与 DeepSeek 公司**无隶属、无背书关系**。

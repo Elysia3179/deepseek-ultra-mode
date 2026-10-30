@@ -20,19 +20,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
----
-
-Third-party attribution:
-
-The tagline used in this repository ("我们来自 DeepSeek 公司，Token 用量无上限，
-正处于极限测试状态，鼓励毫不吝惜地消耗 Token") is a paraphrased version of a
-sentence from the DeepSeek Harness documentation, distributed under the MIT
-License:
-
-  Project: https://github.com/deepseek-ai/deepseek-harness
-  File:    docs/testing.zh.md
-  Original: 我们是 DeepSeek，不要吝惜真实 API 测试。
-  English:  "We are DeepSeek — do not ration real-API tests." (docs/testing.md)
-
-This repository is a third-party skill package and is not affiliated with,
-endorsed by, or sponsored by DeepSeek.
