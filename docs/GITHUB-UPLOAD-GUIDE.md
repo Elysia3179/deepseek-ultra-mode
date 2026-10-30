@@ -233,6 +233,30 @@ git log --oneline
 
 **预期结果**：一行，形如 `3f9a1c2 feat: 初始化 ultra-mode 技能包`。
 
+### 5.1 本次交付已替你完成了一个提交——但作者身份要改
+
+当前仓库里已经有一个提交（`5f9f871`），作者写的是**占位身份**：`Elysia <elysia@users.noreply.github.com>`。占位身份有两个问题：不关联你的 GitHub 头像，而且邮箱很可能不是你的。
+
+**推送前请改成你的**（把上一步的配置落到这个已有提交上）：
+
+```bash
+git config user.name "你的名字"
+git config user.email "你的GitHub注册邮箱"
+git commit --amend --reset-author --no-edit
+```
+
+**预期结果**：输出 `[main xxxxxxx] feat: 初始化 ultra-mode 技能包` 和 `Author: 你的名字 <你的邮箱>`，提交号会变（正常，amend 会重建提交）。
+
+**验证**：
+
+```bash
+git log -1 --format="%an <%ae>"
+```
+
+**预期结果**：`你的名字 <你的邮箱>`。
+
+> 说明：如果 `--amend` 报 `fatal: You have nothing to amend`，说明仓库里没有提交（可能你从第 3 步重新走了一遍），直接跳过这一小节、按第 5 步正常提交即可。
+
 ---
 
 ## 第 6 步 · 在 GitHub 网页创建公开仓库
